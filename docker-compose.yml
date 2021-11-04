@@ -1,23 +1,38 @@
 version: "3.8"
 
 services:
-  frontend:
-    image: goooodmafia/frontend
-    container_name: frontend_app
+#  frontend:
+#    image: morfis/frontend
+#    container_name: frontend_app
 #    ports:
 #      - "3000:3000"
-    expose:
-      - "3000"
+#    expose:
+#      - "3000"
 
   backend:
-    image: goooodmafia/backend
+    image: morfis/backend
     container_name: backend_app
-    env_file:
-      - ./backend/.env
-#    ports:
-#      - "8000:8000"
+    build: ./backend/
+#    env_file:
+#      - ./backend/.env
     expose:
       - "8000"
     command: sh -c "./manage.py collectstatic --no-input && gunicorn --bind :8000 --workers 3 app.wsgi"
     volumes:
       - ./static/:/app/static
+
+  web:
+    container_name: web_app
+    image: nginx:1.19.8-alpine
+    volumes:
+      - ./nginx:/etc/nginx/templates
+      - ./logs:/var/log/nginx
+      - ./static/:/var/www/static
+    ports:
+      - "80:80"
+    environment:
+      - NGINX_HOST=localhost
+      - NGINX_PORT=80
+    depends_on:
+#      - frontend
+      - backend
