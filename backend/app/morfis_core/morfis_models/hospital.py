@@ -1,18 +1,45 @@
 from django.db import models
+from django.db.models import UniqueConstraint, Q
+
 from morfis_core.morfis_models.address import Address
 from morfis_core.morfis_models.department import Department
 
 
-class AbstractHospital(models.Model):
+class Hospital(models.Model):
     title = models.CharField(
         max_length=255,
         verbose_name='Название ЛПУ'
     )
 
-    address = models.ForeignKey(
+    address = models.OneToOneField(
         Address,
         on_delete=models.CASCADE,
         verbose_name='Адресс ЛПУ',
+        blank=True,
+        null=True,
+        default=None
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Учереждение'
+        verbose_name_plural = 'Учереждения'
+
+
+class Subdivision(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name='Название филиала'
+    )
+
+    master_subdivision = models.BooleanField(default=False, verbose_name='Основное подразделение')
+
+    address = models.OneToOneField(
+        Address,
+        on_delete=models.CASCADE,
+        verbose_name='Адресс филиала',
         blank=True,
         null=True,
         default=None
@@ -27,20 +54,21 @@ class AbstractHospital(models.Model):
         default=None
     )
 
-    class Meta:
-        abstract = True
-
-
-class Subsidiary(AbstractHospital):
-    pass
-
-class Hospital(AbstractHospital):
-
-    subsidiary = models.ForeignKey(
-        Subsidiary,
+    hospital = models.ForeignKey(
+        Hospital,
         on_delete=models.CASCADE,
-        verbose_name='Филиалы',
-        blank=True,
-        null=True,
-        default=None
+        verbose_name='Основное учреждение',
+        related_name='subsidiaries'
     )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        constraints = [
+            UniqueConstraint(fields=['master_subdivision'], condition=Q(master_subdivision=True),
+                             name='master_subdivision')
+        ]
+
+        verbose_name = 'Филиал'
+        verbose_name_plural = 'Филиалы'
