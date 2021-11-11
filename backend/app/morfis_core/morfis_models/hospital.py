@@ -62,7 +62,7 @@ class Subdivision(models.Model):
     )
 
     def __str__(self):
-        return self.title
+        return '%s - %s' % (self.hospital.title, self.title)
 
     class Meta:
         constraints = [
