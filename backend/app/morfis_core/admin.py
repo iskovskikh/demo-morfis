@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .morfis_models.address import Address
 from .morfis_models.hospital import Hospital, Subdivision
-from .morfis_models.order import Order, ICDcode
+from .morfis_models.case import Case, ICDcode
 from .morfis_models.utils import CommonInfoAdminMixin
 # Register your models here.
 
@@ -29,8 +29,8 @@ class HospitalAdmin(admin.ModelAdmin):
     #     SubsidiaryInline,
     # ]
 
-@admin.register(Order)
-class OrderAdmin(CommonInfoAdminMixin):
+@admin.register(Case)
+class CaseAdmin(CommonInfoAdminMixin):
     readonly_fields = ('status',)
     # pass
 

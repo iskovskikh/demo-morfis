@@ -1,5 +1,6 @@
 from django.db import models
 from .utils import CommonInfoMixin
+from datetime import datetime
 
 
 class ICDcode(models.Model):
@@ -15,9 +16,9 @@ class ICDcode(models.Model):
         verbose_name='Код международной классификации болезней'
         verbose_name_plural='Коды международной классификации болезней'
 
-class Order(CommonInfoMixin):
+class Case(CommonInfoMixin):
 
-    class OrderStatus(models.TextChoices):
+    class CaseStatus(models.TextChoices):
         OPEN = 'OPEN', 'Создана'
         SENDED = 'SENDSD', 'Направлена'
         ACCEPTED = 'ACCEPTED', 'Принята'
@@ -27,15 +28,15 @@ class Order(CommonInfoMixin):
 
     status = models.CharField(
         max_length=10,
-        choices=OrderStatus.choices,
-        default=OrderStatus.OPEN,
+        choices=CaseStatus.choices,
+        default=CaseStatus.OPEN,
     )
 
     request_id = models.CharField(
         max_length=255,
         blank=True,
         null=True,
-        verbose_name='Регистрационный номер'
+        verbose_name='Регистрационный номер случая'
     )
 
     request_timestamp = models.DateTimeField(verbose_name='Дата направления')
@@ -62,8 +63,8 @@ class Order(CommonInfoMixin):
         return self.request_id if self.request_id else '{номер не присвоен}'
 
     def __str__(self):
-        return 'Заявка #%s' % self.get_request_id()
+        return 'Случай от %s #%s' % (self.request_timestamp.strftime("%d/%m/%y %H:%M"), self.get_request_id())
 
     class Meta:
-        verbose_name = 'Заявка'
-        verbose_name_plural = 'Заявки'
+        verbose_name = 'Случай'
+        verbose_name_plural = 'Случаи'
