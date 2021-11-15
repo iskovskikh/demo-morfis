@@ -1,7 +1,7 @@
 from django.contrib import admin
 from .morfis_models.address import Address
 from .morfis_models.hospital import Hospital, Subdivision
-from .morfis_models.order import Order
+from .morfis_models.order import Order, ICDcode
 from .morfis_models.utils import CommonInfoAdminMixin
 # Register your models here.
 
@@ -34,3 +34,6 @@ class OrderAdmin(CommonInfoAdminMixin):
     readonly_fields = ('status',)
     # pass
 
+@admin.register(ICDcode)
+class ICDcodeAdmin(admin.ModelAdmin):
+    pass

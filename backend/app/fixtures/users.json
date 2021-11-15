@@ -1,0 +1,17 @@
+[
+  {
+    "model": "morfis_auth.morfisuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$0cq1MQMQ0Jwmi1HQHcxanQ$KXK2Ab5PtBQy0UK6tXFeOFFV0qHllVqg2zqBsCIHyKc=",
+      "last_login": "2021-11-09T16:03:37.097Z",
+      "is_superuser": true,
+      "username": "admin",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-11-09T16:03:00.224Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]

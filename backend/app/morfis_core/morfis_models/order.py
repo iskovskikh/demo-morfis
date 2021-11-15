@@ -2,7 +2,21 @@ from django.db import models
 from .utils import CommonInfoMixin
 
 
+class ICDcode(models.Model):
+    code = models.CharField(max_length=255, verbose_name='Код диагноза')
+    disease_description = models.CharField(max_length=255, verbose_name='Название диагнозa')
+    parent_code = models.CharField(max_length=255, verbose_name='Код родителя')
+
+    def __str__(self):
+        return '%s - %s' % (self.code, self.disease_description)
+
+    class Meta:
+        ordering=['pk',]
+        verbose_name='Код международной классификации болезней'
+        verbose_name_plural='Коды международной классификации болезней'
+
 class Order(CommonInfoMixin):
+
     class OrderStatus(models.TextChoices):
         OPEN = 'OPEN', 'Создана'
         SENDED = 'SENDSD', 'Направлена'
@@ -17,13 +31,38 @@ class Order(CommonInfoMixin):
         default=OrderStatus.OPEN,
     )
 
-    id_number = models.CharField(max_length=255, blank=False, null=False, verbose_name='Регистрационный номер')
+    request_id = models.CharField(
+        max_length=255,
+        blank=True,
+        null=True,
+        verbose_name='Регистрационный номер'
+    )
 
-    #pacient ForeingKey
-    #bio-material List
+    request_timestamp = models.DateTimeField(verbose_name='Дата направления')
+    organization = models.CharField(max_length=255, verbose_name='Организация, создавшая направление')
+    disease_description = models.TextField(verbose_name='Диагноз заболевания (состояния)')
+    mkb_code = models.ForeignKey(ICDcode, on_delete=models.CASCADE, verbose_name='Код МКБ')
+    order_task = models.TextField(verbose_name='Задача исследования')
+
+
+
+
+    # pacient ForeingKey
+    # bio-material List
+    # Дата направления
+    # Организация, создавшая направление
+    # Диагноз заболевания(состояние)
+    # Код МКБ(ForeingKey)
+    # Задача исследования
+    # Доп.клинические сведения
+    # Результаты предыдущих исследований
+
+    def get_request_id(self):
+        request_id = None
+        return self.request_id if self.request_id else '{номер не присвоен}'
 
     def __str__(self):
-        return 'Заявка #%s' % self.id_number
+        return 'Заявка #%s' % self.get_request_id()
 
     class Meta:
         verbose_name = 'Заявка'
