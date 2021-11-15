@@ -1,4 +1,17 @@
-# Morfis auth demo
+# Morfis demo
+
+Upd.15/11/21
+
+Добавлены endpoint'ы:
+
+`/api/v1/case/icd_code/` Постраничный список всех кодов МКБ-10
+
+`/api/v1/case/icd_code/<id>/` Запрос кода по ID
+
+`/api/api/v1/case/icd_code/?search=A01` Поиск кода по полям ***Код диагноза*** и 
+***Название диагнозa***
+
+---
 
 Демо api token авторизации.
 
