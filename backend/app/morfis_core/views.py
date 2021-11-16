@@ -31,3 +31,7 @@ class ICDcodeViewSet(generics.ListAPIView):
     serializer_class = ICDcodeSerializer
     permission_classes = [permissions.AllowAny]
     pagination_class = MyDefaultPageNumberPagination
+
+
+class CaseViewSet(generics.ListAPIView):
+    sea
