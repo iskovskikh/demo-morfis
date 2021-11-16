@@ -1,14 +1,19 @@
 from django.shortcuts import render
 
-from rest_framework import viewsets
+from rest_framework import viewsets, generics
 from rest_framework import permissions
 from .serializers import MorfisUserSerializer
 
 # Create your views here.
 from morfis_auth.models import MorfisUser
 
+from rest_framework import views
+
+
+
 
 class MorfisUserViewSet(viewsets.ModelViewSet):
+# class MorfisUserViewSet(viewsets.generics.ListAPIView):
     """
     API endpoint that allows users to be viewed or edited.
     """

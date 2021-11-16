@@ -6,32 +6,29 @@ from rest_framework import viewsets, permissions, generics, filters, mixins
 from rest_framework.generics import GenericAPIView
 
 from morfis_core.morfis_models import case
-from .serializers import ICDcodeSerializer
+from .serializers import ICDcodeSerializer, CaseSerializer
 
 
 class MyDefaultPageNumberPagination(rest_framework.pagination.PageNumberPagination):
     page_size_query_param = 'page_size'
     max_page_size = 100
 
-# class ICDcodeViewSet(viewsets.ModelViewSet):
-# class ICDcodeViewSet(generics.ListCreateAPIView):
-class ICDcodeViewSet(generics.ListAPIView):
-# class ICDcodeViewSet(
-#     mixins.ListModelMixin,
-#     mixins.RetrieveModelMixin,
-#     GenericAPIView
-# ):
-    """
-    API endpoint that allows users to be viewed or edited.
-    """
+
+class IcdCodeViewSet(generics.ListAPIView):
+
+    queryset = case.IcdCode.objects.all()
+    serializer_class = ICDcodeSerializer
 
     search_fields = ['code', 'disease_description']
     filter_backends = (filters.SearchFilter,)
-    queryset = case.ICDcode.objects.all()
-    serializer_class = ICDcodeSerializer
-    permission_classes = [permissions.AllowAny]
     pagination_class = MyDefaultPageNumberPagination
+    permission_classes = [permissions.AllowAny]
 
 
-class CaseViewSet(generics.ListAPIView):
-    sea
+
+class CaseViewSet(generics.ListCreateAPIView):
+
+    queryset = case.Case.objects.all() #todo filter by subdivision
+    serializer_class = CaseSerializer
+    search_fields = ['request_id']
+    permission_classes = [permissions.IsAuthenticated]

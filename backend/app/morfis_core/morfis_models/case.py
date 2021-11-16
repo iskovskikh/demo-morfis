@@ -3,7 +3,7 @@ from .utils import CommonInfoMixin
 from datetime import datetime
 
 
-class ICDcode(models.Model):
+class IcdCode(models.Model):
     code = models.CharField(max_length=255, verbose_name='Код диагноза')
     disease_description = models.CharField(max_length=255, verbose_name='Название диагнозa')
     parent_code = models.CharField(max_length=255, verbose_name='Код родителя')
@@ -42,7 +42,7 @@ class Case(CommonInfoMixin):
     request_timestamp = models.DateTimeField(verbose_name='Дата направления')
     organization = models.CharField(max_length=255, verbose_name='Организация, создавшая направление')
     disease_description = models.TextField(verbose_name='Диагноз заболевания (состояния)')
-    mkb_code = models.ForeignKey(ICDcode, on_delete=models.CASCADE, verbose_name='Код МКБ')
+    mkb_code = models.ForeignKey(IcdCode, on_delete=models.CASCADE, verbose_name='Код МКБ')
     order_task = models.TextField(verbose_name='Задача исследования')
 
 
