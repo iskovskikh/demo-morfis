@@ -1,4 +1,5 @@
 import rest_framework.pagination
+from django.db.models import Q
 from django.shortcuts import render
 
 # Create your views here.
@@ -28,7 +29,17 @@ class IcdCodeViewSet(generics.ListAPIView):
 
 class CaseViewSet(generics.ListCreateAPIView):
 
-    queryset = case.Case.objects.all() #todo filter by subdivision
+    # queryset = case.Case.objects.all() todo filter by subdivision
     serializer_class = CaseSerializer
     search_fields = ['request_id']
     permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        qs = case.Case.objects.all()
+        return self.filter_queryset_for_user(qs, self.request.user)
+
+    def filter_queryset_for_user(self, qs, user):
+        # qs.filter(Q(subdivision_in = user.hospital.subdivisions))
+        # pass  # Your logic here
+        print(user.subdivision)
+        return qs

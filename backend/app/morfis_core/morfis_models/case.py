@@ -1,5 +1,7 @@
 from django.db import models
-from .utils import CommonInfoMixin
+
+from .hospital import Subdivision
+from .utils import CommonInfo
 from datetime import datetime
 
 
@@ -16,7 +18,7 @@ class IcdCode(models.Model):
         verbose_name='Код международной классификации болезней'
         verbose_name_plural='Коды международной классификации болезней'
 
-class Case(CommonInfoMixin):
+class Case(CommonInfo):
 
     class CaseStatus(models.TextChoices):
         OPEN = 'OPEN', 'Создана'
@@ -45,6 +47,7 @@ class Case(CommonInfoMixin):
     mkb_code = models.ForeignKey(IcdCode, on_delete=models.CASCADE, verbose_name='Код МКБ')
     order_task = models.TextField(verbose_name='Задача исследования')
 
+    subdivision = models.ForeignKey(Subdivision, on_delete=models.CASCADE, verbose_name='Филиал', null=True)
 
 
 
