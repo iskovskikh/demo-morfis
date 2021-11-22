@@ -12,8 +12,8 @@ class CommonInfo(models.Model):
     mod_date = models.DateTimeField(auto_now=True, auto_now_add=False, verbose_name='Дата изменения')
 
     created_by = models.ForeignKey(MorfisUser, on_delete=models.CASCADE, related_name='%(class)s_requests_created')
-    lastmodified_by = models.ForeignKey(MorfisUser, on_delete=models.CASCADE,related_name='%(class)s_requests_modified')
-
+    lastmodified_by = models.ForeignKey(MorfisUser, on_delete=models.CASCADE,
+                                        related_name='%(class)s_requests_modified')
 
     @staticmethod
     def get_current_user():
@@ -34,12 +34,16 @@ class CommonInfo(models.Model):
     def save(self, *args, **kwargs):
         # self.mod_date = datetime.now()
         current_user = self.get_current_user()
+        print(current_user)
         self.set_user_fields(current_user)
         super(CommonInfo, self).save(*args, **kwargs)
 
 
 class CommonInfoAdminMixin(admin.ModelAdmin):
+    fields = ('add_date',)
     readonly_fields = (
         'add_date',
         'mod_date',
+        'created_by',
+        'lastmodified_by',
     )

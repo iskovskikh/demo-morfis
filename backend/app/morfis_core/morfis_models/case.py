@@ -7,7 +7,7 @@ from datetime import datetime
 
 class IcdCode(models.Model):
     code = models.CharField(max_length=255, verbose_name='Код диагноза')
-    disease_description = models.CharField(max_length=255, verbose_name='Название диагнозa')
+    disease_description = models.CharField(max_length=255, verbose_name='Описание диагнозa')
     parent_code = models.CharField(max_length=255, verbose_name='Код родителя')
 
     def __str__(self):
@@ -17,6 +17,9 @@ class IcdCode(models.Model):
         ordering=['pk',]
         verbose_name='Код международной классификации болезней'
         verbose_name_plural='Коды международной классификации болезней'
+
+
+
 
 class Case(CommonInfo):
 
@@ -41,7 +44,7 @@ class Case(CommonInfo):
         verbose_name='Регистрационный номер случая'
     )
 
-    request_timestamp = models.DateTimeField(verbose_name='Дата направления')
+    timestamp = models.DateTimeField(verbose_name='Дата направления')
     organization = models.CharField(max_length=255, verbose_name='Организация, создавшая направление')
     disease_description = models.TextField(verbose_name='Диагноз заболевания (состояния)')
     mkb_code = models.ForeignKey(IcdCode, on_delete=models.CASCADE, verbose_name='Код МКБ')
@@ -66,8 +69,21 @@ class Case(CommonInfo):
         return self.request_id if self.request_id else '{номер не присвоен}'
 
     def __str__(self):
-        return 'Случай от %s #%s' % (self.request_timestamp.strftime("%d/%m/%y %H:%M"), self.get_request_id())
+        return 'Случай от %s #%s' % (self.timestamp.strftime("%d/%m/%y %H:%M"), self.get_request_id())
 
     class Meta:
         verbose_name = 'Случай'
         verbose_name_plural = 'Случаи'
+
+
+class PreviousCase(models.Model):
+    organization = models.CharField(max_length=255, verbose_name='Организация, давшая заключение')
+    case = models.ForeignKey(Case, on_delete=models.CASCADE, verbose_name='Организация, давшая заключение')
+    timestamp = models.DateTimeField(verbose_name='Дата заключения')
+    request_id = models.CharField(
+        max_length=255,
+        blank=True,
+        null=True,
+        verbose_name='Регистрационный номер заключения'
+    )
+    conclusion = models.TextField(verbose_name='Заключение')

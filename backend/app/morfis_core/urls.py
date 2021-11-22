@@ -3,8 +3,8 @@ from rest_framework import routers
 from . import views
 
 
-router = routers.SimpleRouter()
-router.register(r'icd_codes', views.IcdCodeViewSet)
+# router = routers.SimpleRouter()
+# router.register(r'icd_codes', views.IcdCodeViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
@@ -14,6 +14,7 @@ urlpatterns = [
     # path('auth/', include('rest_framework.urls', namespace='rest_framework')),
     # path('case/', include(router.urls)),
 
-    path('case/', views.CaseViewSet.as_view()),
-    path('case/icd_code/', views.IcdCodeViewSet.as_view())
+    path('case/', views.CaseListViewSet.as_view()),
+    path('case/<int:pk>/', views.CaseUpdateViewSet.as_view()),
+    path('icd_codes/', views.IcdCodeListViewSet.as_view())
 ]

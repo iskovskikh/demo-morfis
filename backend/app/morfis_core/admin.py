@@ -6,6 +6,8 @@ from .morfis_models.utils import CommonInfoAdminMixin
 # Register your models here.
 
 from django.contrib import admin
+
+
 # from django.core import urlresolvers
 # from django.utils.html import format_html
 
@@ -17,9 +19,11 @@ from django.contrib import admin
 class AddressAdmin(admin.ModelAdmin):
     pass
 
+
 @admin.register(Subdivision)
 class SubdivisionAdmin(admin.ModelAdmin):
     pass
+
 
 @admin.register(Hospital)
 class HospitalAdmin(admin.ModelAdmin):
@@ -29,10 +33,12 @@ class HospitalAdmin(admin.ModelAdmin):
     #     SubsidiaryInline,
     # ]
 
+
 @admin.register(Case)
 class CaseAdmin(CommonInfoAdminMixin):
     readonly_fields = ('status',)
     # pass
+
 
 @admin.register(IcdCode)
 class ICDcodeAdmin(admin.ModelAdmin):

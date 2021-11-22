@@ -15,14 +15,14 @@ class MorfisUserAdmin(UserAdmin):
     list_display = ('username', 'is_staff', 'is_active',)
     list_filter = ('username', 'last_name', 'first_name', 'middle_name', 'is_staff', 'is_active',)
     fieldsets = (
-        (None, {'fields': ('username', 'password', 'last_name', 'first_name', 'middle_name',)}),
+        (None, {'fields': ('username', 'password', 'last_name', 'first_name', 'middle_name', 'subdivision')}),
         ('Permissions', {'fields': ('is_staff', 'is_active')}),
     )
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
             'fields': (
-            'username','last_name', 'first_name', 'middle_name',  'password1', 'password2', 'is_staff', 'is_active')}
+            'username','last_name', 'first_name', 'middle_name',  'password1', 'password2', 'is_staff', 'is_active', 'subdivision')}
          ),
     )
     search_fields = ('username',)
