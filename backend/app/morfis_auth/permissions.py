@@ -17,7 +17,7 @@ class IsSubdivisionMember(permissions.BasePermission):
         # return obj.owner == request.user
         # return True
 
-        if request.user.subdivision == obj.subdivision:
+        if (request.user.subdivision == obj.subdivision) or request.user.is_admin() :
             return True
 
         return False

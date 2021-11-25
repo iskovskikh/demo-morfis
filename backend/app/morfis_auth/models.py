@@ -5,8 +5,21 @@ from django.db import models
 
 # Create your models here.
 from django.utils import timezone
-from morfis_core.morfis_models.hospital import Subdivision
+from morfis_core.morfis_models.hospital import Hospital
 from .managers import MorfisUserManager
+
+
+class Position(models.Model):
+    title = models.CharField(
+        max_length=255,
+        unique = True,
+        verbose_name='Название должности'
+    )
+
+    class Meta:
+        verbose_name='Должность'
+        verbose_name_plural='Должности'
+        permissions = []
 
 
 # class MorfisUser(AbstractUser):
@@ -56,7 +69,7 @@ class MorfisUser(AbstractBaseUser, PermissionsMixin):
 
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
-    subdivision = models.ForeignKey(Subdivision, on_delete=models.CASCADE, verbose_name = 'Филиал', null=True)
+    subdivision = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name ='Филиал', null=True)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
@@ -72,6 +85,9 @@ class MorfisUser(AbstractBaseUser, PermissionsMixin):
     # стола
     def __str__(self):
         return self.username
+
+    def is_admin(self):
+        return self.is_staff and self.is_active
 
     class Meta:
         verbose_name = 'Морфис аккаунт'

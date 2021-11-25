@@ -40,7 +40,7 @@ class CommonInfo(models.Model):
 
 
 class CommonInfoAdminMixin(admin.ModelAdmin):
-    fields = ('add_date',)
+    fields = ('add_date', 'created_by', 'mod_date', 'lastmodified_by',)
     readonly_fields = (
         'add_date',
         'mod_date',
