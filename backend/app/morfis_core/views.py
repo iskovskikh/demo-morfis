@@ -5,6 +5,7 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import viewsets, permissions, generics, filters, mixins
 from rest_framework.generics import GenericAPIView, get_object_or_404
+from rest_framework.permissions import DjangoObjectPermissions
 
 from morfis_core.morfis_models import case
 from .serializers import ICDcodeSerializer, CaseSerializer
@@ -31,7 +32,7 @@ class IcdCodeListViewSet(generics.ListAPIView):
 class CaseUpdateViewSet(generics.UpdateAPIView,generics.RetrieveAPIView):
     serializer_class = CaseSerializer
     queryset = case.Case.objects.all()
-    permission_classes = [IsSubdivisionMember]
+    permission_classes = [DjangoObjectPermissions]
     # permission_classes = [permissions.IsAuthenticated]
 
 

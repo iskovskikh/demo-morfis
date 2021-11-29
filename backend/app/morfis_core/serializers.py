@@ -7,7 +7,7 @@ from morfis_core.morfis_models import case
 class ICDcodeSerializer(serializers.ModelSerializer):
     class Meta:
         model = case.IcdCode
-        fields = ['id', 'code', ]
+        fields = ['id', 'code', 'disease_description' ]
 
 
 class CaseSerializer(serializers.ModelSerializer):

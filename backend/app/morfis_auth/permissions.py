@@ -3,6 +3,9 @@ from rest_framework import permissions
 
 class IsSubdivisionMember(permissions.BasePermission):
 
+    def has_permission(self, request, view):
+        return True
+
     def has_object_permission(self, request, view, obj):
 
         # print(vars(request.user.subdivision))

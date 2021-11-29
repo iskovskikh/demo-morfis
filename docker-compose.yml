@@ -3,6 +3,7 @@ version: "3.8"
 services:
 #  frontend:
 #    image: morfis/frontend
+#    build: ./front/
 #    container_name: frontend_app
 #    ports:
 #      - "3000:3000"
