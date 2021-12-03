@@ -25,7 +25,7 @@ class Case(CommonInfo):
 
     class CaseStatus(models.TextChoices):
         OPEN = 'OPEN', 'Создана'
-        SENDED = 'SENDSD', 'Направлена'
+        SENDED = 'SENDED', 'Направлена'
         ACCEPTED = 'ACCEPTED', 'Принята'
         # ...
         ARCHIVED = 'ARCHIVED', 'Архивирована'
