@@ -10,7 +10,6 @@ class Organization(models.Model):
         verbose_name='Название организации'
     )
 
-
     address = models.OneToOneField(
         Address,
         on_delete=models.CASCADE,
@@ -19,7 +18,6 @@ class Organization(models.Model):
         null=True,
         default=None
     )
-
 
     def __str__(self):
         return '%s' % self.title
