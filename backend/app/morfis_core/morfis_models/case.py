@@ -50,7 +50,7 @@ class Case(CommonInfo):
     mkb_code = models.ForeignKey(IcdCode, on_delete=models.CASCADE, verbose_name='Код МКБ')
     order_task = models.TextField(verbose_name='Задача исследования')
 
-    subdivision = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Филиал', null=True)
+    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Филиал', null=True)
 
 
 

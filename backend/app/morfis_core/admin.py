@@ -21,7 +21,7 @@ class AddressAdmin(admin.ModelAdmin):
 
 
 @admin.register(Hospital)
-class SubdivisionAdmin(admin.ModelAdmin):
+class HospitalAdmin(admin.ModelAdmin):
     pass
 
 

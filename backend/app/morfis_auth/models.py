@@ -69,7 +69,7 @@ class MorfisUser(AbstractBaseUser, PermissionsMixin):
 
     date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
-    subdivision = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name ='Филиал', null=True)
+    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name ='Филиал', null=True)
 
     USERNAME_FIELD = 'username'
     REQUIRED_FIELDS = []
