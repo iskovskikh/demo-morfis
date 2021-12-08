@@ -50,6 +50,7 @@ INSTALLED_APPS = [
 
     'corsheaders',
     'rest_framework',
+    'haystack',
 
     'morfis_auth',
     'morfis_core',
@@ -191,4 +192,40 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(minutes=10),
+}
+
+HAYSTACK_DEFAULT_OPERATOR = 'AND'
+HAYSTACK_CONNECTIONS = {
+    # 'default': {
+    #     'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
+    #     'URL': 'http://localhost:9001/solr/default',
+    #     'TIMEOUT': 60 * 5,
+    #     'INCLUDE_SPELLING': True,
+    #     'BATCH_SIZE': 100,
+    #     'EXCLUDED_INDEXES': ['thirdpartyapp.search_indexes.BarIndex'],
+    # },
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+        'PATH': BASE_DIR / 'whoosh_index',
+    },
+    # 'autocomplete': {
+    #     'ENGINE': 'haystack.backends.whoosh_backend.WhooshEngine',
+    #     'PATH': '/home/search/whoosh_index',
+    #     'STORAGE': 'file',
+    #     'POST_LIMIT': 128 * 1024 * 1024,
+    #     'INCLUDE_SPELLING': True,
+    #     'BATCH_SIZE': 100,
+    #     'EXCLUDED_INDEXES': ['thirdpartyapp.search_indexes.BarIndex'],
+    # },
+    # 'slave': {
+    #     'ENGINE': 'xapian_backend.XapianEngine',
+    #     'PATH': '/home/search/xapian_index',
+    #     'INCLUDE_SPELLING': True,
+    #     'BATCH_SIZE': 100,
+    #     'EXCLUDED_INDEXES': ['thirdpartyapp.search_indexes.BarIndex'],
+    # },
+    # 'db': {
+    #     'ENGINE': 'haystack.backends.simple_backend.SimpleEngine',
+    #     'EXCLUDED_INDEXES': ['thirdpartyapp.search_indexes.BarIndex'],
+    # }
 }
