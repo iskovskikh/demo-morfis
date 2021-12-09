@@ -1,0 +1,2252 @@
+[
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 1,
+    "fields": {
+      "code": "A00-B99",
+      "disease_description": "Некоторые инфекционные и паразитарные болезни",
+      "parent_code": ""
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 2,
+    "fields": {
+      "code": "A00-A09",
+      "disease_description": "Кишечные инфекции",
+      "parent_code": "A00-B99"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 3,
+    "fields": {
+      "code": "A00",
+      "disease_description": "Холера",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 4,
+    "fields": {
+      "code": "A00.0",
+      "disease_description": "Холера, вызванная холерным вибрионом 01, биовар cholerae",
+      "parent_code": "A00"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 5,
+    "fields": {
+      "code": "A00.1",
+      "disease_description": "Холера, вызванная холерным вибрионом 01, биовар eltor",
+      "parent_code": "A00"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 6,
+    "fields": {
+      "code": "A00.9",
+      "disease_description": "Холера неуточненная",
+      "parent_code": "A00"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 7,
+    "fields": {
+      "code": "A01",
+      "disease_description": "Тиф и паратиф",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 8,
+    "fields": {
+      "code": "A01.0",
+      "disease_description": "Брюшной тиф",
+      "parent_code": "A01"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 9,
+    "fields": {
+      "code": "A01.1",
+      "disease_description": "Паратиф A",
+      "parent_code": "A01"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 10,
+    "fields": {
+      "code": "A01.2",
+      "disease_description": "Паратиф B",
+      "parent_code": "A01"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 11,
+    "fields": {
+      "code": "A01.3",
+      "disease_description": "Паратиф C",
+      "parent_code": "A01"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 12,
+    "fields": {
+      "code": "A01.4",
+      "disease_description": "Паратиф неуточненный",
+      "parent_code": "A01"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 13,
+    "fields": {
+      "code": "A02",
+      "disease_description": "Другие сальмонеллезные инфекции",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 14,
+    "fields": {
+      "code": "A02.0",
+      "disease_description": "Сальмонеллезный энтерит",
+      "parent_code": "A02"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 15,
+    "fields": {
+      "code": "A02.1",
+      "disease_description": "Сальмонеллезная септицемия",
+      "parent_code": "A02"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 16,
+    "fields": {
+      "code": "A02.2+",
+      "disease_description": "Локализованная сальмонеллезная инфекция",
+      "parent_code": "A02"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 17,
+    "fields": {
+      "code": "A02.8",
+      "disease_description": "Другая уточненная сальмонеллезная инфекция",
+      "parent_code": "A02"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 18,
+    "fields": {
+      "code": "A02.9",
+      "disease_description": "Сальмонеллезная инфекция неуточненная",
+      "parent_code": "A02"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 19,
+    "fields": {
+      "code": "A03",
+      "disease_description": "Шигеллез",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 20,
+    "fields": {
+      "code": "A03.0",
+      "disease_description": "Шигеллез, вызванный Shigella dysenteriae",
+      "parent_code": "A03"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 21,
+    "fields": {
+      "code": "A03.02",
+      "disease_description": "Шигеллез, вызванный Shigella boydii",
+      "parent_code": "A03"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 22,
+    "fields": {
+      "code": "A03.1",
+      "disease_description": "Шигеллез, вызванный Shigella flexneri",
+      "parent_code": "A03"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 23,
+    "fields": {
+      "code": "A03.3",
+      "disease_description": "Шигеллез, вызванный Shigella sonnei",
+      "parent_code": "A03"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 24,
+    "fields": {
+      "code": "A03.8",
+      "disease_description": "Другой шигеллез",
+      "parent_code": "A03"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 25,
+    "fields": {
+      "code": "A03.9",
+      "disease_description": "Шигеллез неуточненный",
+      "parent_code": "A03"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 26,
+    "fields": {
+      "code": "A04",
+      "disease_description": "Другие бактериальные кишечные инфекции",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 27,
+    "fields": {
+      "code": "A04.0",
+      "disease_description": "Энтеропатогенная инфекция, вызванная Escherichia coli",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 28,
+    "fields": {
+      "code": "A04.1",
+      "disease_description": "Энтеротоксигенная инфекция, вызванная Escherichia coli",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 29,
+    "fields": {
+      "code": "A04.2",
+      "disease_description": "Энтероинвазивная инфекция, вызванная Escherichia coli",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 30,
+    "fields": {
+      "code": "A04.3",
+      "disease_description": "Энтерогеморрагическая инфекция, вызванная Escherichia coli",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 31,
+    "fields": {
+      "code": "A04.4",
+      "disease_description": "Другие кишечные инфекции, вызванные Escherichia coli",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 32,
+    "fields": {
+      "code": "A04.5",
+      "disease_description": "Энтерит, вызванный Campylobacter",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 33,
+    "fields": {
+      "code": "A04.6",
+      "disease_description": "Энтерит, вызванный Yersinia enterocolitica",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 34,
+    "fields": {
+      "code": "A04.7",
+      "disease_description": "Энтероколит, вызванный Clostridium difficile",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 35,
+    "fields": {
+      "code": "A04.8",
+      "disease_description": "Другие уточненные бактериальные кишечные инфекции",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 36,
+    "fields": {
+      "code": "A04.9",
+      "disease_description": "Бактериальная кишечная инфекция неуточненная",
+      "parent_code": "A04"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 37,
+    "fields": {
+      "code": "A05",
+      "disease_description": "Другие бактериальные пищевые отравления",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 38,
+    "fields": {
+      "code": "A05.0",
+      "disease_description": "Стафилококковое пищевое отравление",
+      "parent_code": "A05"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 39,
+    "fields": {
+      "code": "A05.1",
+      "disease_description": "Ботулизм",
+      "parent_code": "A05"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 40,
+    "fields": {
+      "code": "A05.2",
+      "disease_description": "Пищевое отравление, вызванное Clostridium perfringens",
+      "parent_code": "A05"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 41,
+    "fields": {
+      "code": "A05.3",
+      "disease_description": "Пищевое отравление, вызванное Vibrio parahaemolyticus",
+      "parent_code": "A05"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 42,
+    "fields": {
+      "code": "A05.4",
+      "disease_description": "Пищевое отравление, вызванное Bacillus cereus",
+      "parent_code": "A05"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 43,
+    "fields": {
+      "code": "A05.8",
+      "disease_description": "Другие уточненные бактериальные пищевые отравления",
+      "parent_code": "A05"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 44,
+    "fields": {
+      "code": "A05.9",
+      "disease_description": "Бактериальное пищевое отравление неуточненное",
+      "parent_code": "A05"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 45,
+    "fields": {
+      "code": "A06",
+      "disease_description": "Амебиаз",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 46,
+    "fields": {
+      "code": "A06.0",
+      "disease_description": "Острая амебная дизентерия",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 47,
+    "fields": {
+      "code": "A06.1",
+      "disease_description": "Хронический кишечный амебиаз",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 48,
+    "fields": {
+      "code": "A06.2",
+      "disease_description": "Амебный недизентерийный колит",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 49,
+    "fields": {
+      "code": "A06.3",
+      "disease_description": "Амебома кишечника",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 50,
+    "fields": {
+      "code": "A06.4",
+      "disease_description": "Амебный абсцесс печени",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 51,
+    "fields": {
+      "code": "A06.5+",
+      "disease_description": "Амебный абсцесс легкого (J99.8*)",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 52,
+    "fields": {
+      "code": "A06.6+",
+      "disease_description": "Амебный абсцесс головного мозга (G07*)",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 53,
+    "fields": {
+      "code": "A06.7",
+      "disease_description": "Кожный амебиаз",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 54,
+    "fields": {
+      "code": "A06.8",
+      "disease_description": "Амебная инфекция другой локализации",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 55,
+    "fields": {
+      "code": "A06.9",
+      "disease_description": "Амебиаз неуточненный",
+      "parent_code": "A06"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 56,
+    "fields": {
+      "code": "A07",
+      "disease_description": "Другие протозойные кишечные болезни",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 57,
+    "fields": {
+      "code": "A07.0",
+      "disease_description": "Балантидиаз",
+      "parent_code": "A07"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 58,
+    "fields": {
+      "code": "A07.1",
+      "disease_description": "Жиардиаз [лямблиоз]",
+      "parent_code": "A07"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 59,
+    "fields": {
+      "code": "A07.2",
+      "disease_description": "Криптоспоридиоз",
+      "parent_code": "A07"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 60,
+    "fields": {
+      "code": "A07.3",
+      "disease_description": "Изоспороз",
+      "parent_code": "A07"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 61,
+    "fields": {
+      "code": "A07.8",
+      "disease_description": "Другие уточненные протозойные кишечные болезни",
+      "parent_code": "A07"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 62,
+    "fields": {
+      "code": "A07.9",
+      "disease_description": "Протозойная кишечная болезнь неуточненная",
+      "parent_code": "A07"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 63,
+    "fields": {
+      "code": "A08",
+      "disease_description": "Вирусные и другие уточненные кишечные инфекции",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 64,
+    "fields": {
+      "code": "A08.0",
+      "disease_description": "Ротавирусный энтерит",
+      "parent_code": "A08"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 65,
+    "fields": {
+      "code": "A08.1",
+      "disease_description": "Острая гастроэнтеропатия, вызванная возбудителем Норволк",
+      "parent_code": "A08"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 66,
+    "fields": {
+      "code": "A08.2",
+      "disease_description": "Аденовирусный энтерит",
+      "parent_code": "A08"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 67,
+    "fields": {
+      "code": "A08.3",
+      "disease_description": "Другие вирусные энтериты",
+      "parent_code": "A08"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 68,
+    "fields": {
+      "code": "A08.4",
+      "disease_description": "Вирусная кишечная инфекция неуточненная",
+      "parent_code": "A08"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 69,
+    "fields": {
+      "code": "A08.5",
+      "disease_description": "Другие уточненные кишечные инфекции",
+      "parent_code": "A08"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 70,
+    "fields": {
+      "code": "A09",
+      "disease_description": "Диарея и гастроэнтерит предположительно инфекционного происхождения",
+      "parent_code": "A00-A09"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 71,
+    "fields": {
+      "code": "A15-A19",
+      "disease_description": "Туберкулез",
+      "parent_code": "A00-B99"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 72,
+    "fields": {
+      "code": "A15",
+      "disease_description": "Туберкулез органов дыхания, подтвержденный бактериологически и гистологически",
+      "parent_code": "A15-A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 73,
+    "fields": {
+      "code": "A15.0",
+      "disease_description": "Туберкулез легких, подтвержденный бактериоскопически с наличием или отсутствием роста культуры",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 74,
+    "fields": {
+      "code": "A15.1",
+      "disease_description": "Туберкулез легких, подтвержденный только ростом культуры",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 75,
+    "fields": {
+      "code": "A15.2",
+      "disease_description": "Туберкулез легких, подтвержденный гистологически",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 76,
+    "fields": {
+      "code": "A15.3",
+      "disease_description": "Туберкулез легких, подтвержденный неуточненными методами",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 77,
+    "fields": {
+      "code": "A15.4",
+      "disease_description": "Туберкулез внутригрудных лимфатических узлов, подтвержденный бактериологически и гистологически",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 78,
+    "fields": {
+      "code": "A15.5",
+      "disease_description": "Туберкулез гортани, трахеи и бронхов, подтвержденный бактериологически и гистологически",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 79,
+    "fields": {
+      "code": "A15.6",
+      "disease_description": "Туберкулезный плеврит, подтвержденный бактериологически и гистологически",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 80,
+    "fields": {
+      "code": "A15.7",
+      "disease_description": "Первичный туберкулез органов дыхания, подтвержденный бактериологически и гистологически",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 81,
+    "fields": {
+      "code": "A15.8",
+      "disease_description": "Туберкулез других органов дыхания, подтвержденный бактериологически и гистологически",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 82,
+    "fields": {
+      "code": "A15.9",
+      "disease_description": "Туберкулез органов дыхания неуточненной локализации, подтвержденный бактериологически и гистологически",
+      "parent_code": "A15"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 83,
+    "fields": {
+      "code": "A16",
+      "disease_description": "Туберкулез органов дыхания, не подтвержденный бактериологически или гистологически",
+      "parent_code": "A15-A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 84,
+    "fields": {
+      "code": "A16.0",
+      "disease_description": "Туберкулез легких при отрицательных результатах бактериологических и гистологических исследований",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 85,
+    "fields": {
+      "code": "A16.1",
+      "disease_description": "Туберкулез легких без проведения бактериологического и гистологического исследований",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 86,
+    "fields": {
+      "code": "A16.2",
+      "disease_description": "Туберкулез легких без упоминания о бактериологическом или гистологическом подтверждении",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 87,
+    "fields": {
+      "code": "A16.3",
+      "disease_description": "Туберкулез внутригрудных лимфатических узлов без упоминания о бактериологическом или гистологическом подтверждении",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 88,
+    "fields": {
+      "code": "A16.4",
+      "disease_description": "Туберкулез гортани, трахеи и бронхов без упоминания о бактериологическом или гистологическом подтверждении",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 89,
+    "fields": {
+      "code": "A16.5",
+      "disease_description": "Туберкулезный плеврит без упоминания о бактериологическом или гистологическом подтверждении",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 90,
+    "fields": {
+      "code": "A16.7",
+      "disease_description": "Первичный туберкулез органов дыхания без упоминания о бактериологическом или гистологическом подтверждении",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 91,
+    "fields": {
+      "code": "A16.8",
+      "disease_description": "Туберкулез других органов дыхания без упоминания о бактериологическом или гистологическом подтверждении",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 92,
+    "fields": {
+      "code": "A16.9",
+      "disease_description": "Туберкулез органов дыхания неуточненной локализации без упоминания о бактериологическом или гистологическом подтверждении",
+      "parent_code": "A16"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 93,
+    "fields": {
+      "code": "A17+",
+      "disease_description": "Туберкулез нервной системы",
+      "parent_code": "A15-A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 94,
+    "fields": {
+      "code": "A17.0+",
+      "disease_description": "Туберкулезный менингит (G01*)",
+      "parent_code": "A17+"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 95,
+    "fields": {
+      "code": "A17.1+",
+      "disease_description": "Менингеальная туберкулема (G07*)",
+      "parent_code": "A17+"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 96,
+    "fields": {
+      "code": "A17.8+",
+      "disease_description": "Туберкулез нервной системы других локализаций",
+      "parent_code": "A17+"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 97,
+    "fields": {
+      "code": "A17.9+",
+      "disease_description": "Туберкулез нервной системы неуточненный (G99.8*)",
+      "parent_code": "A17+"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 98,
+    "fields": {
+      "code": "A18",
+      "disease_description": "Туберкулез других органов",
+      "parent_code": "A15-A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 99,
+    "fields": {
+      "code": "A18.0+",
+      "disease_description": "Туберкулез костей и суставов",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 100,
+    "fields": {
+      "code": "A18.1+",
+      "disease_description": "Туберкулез мочеполовых органов",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 101,
+    "fields": {
+      "code": "A18.2",
+      "disease_description": "Туберкулезная периферическая лимфаденопатия",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 102,
+    "fields": {
+      "code": "A18.3",
+      "disease_description": "Туберкулез кишечника, брюшины и брыжеечных лимфатических узлов",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 103,
+    "fields": {
+      "code": "A18.4",
+      "disease_description": "Туберкулез кожи и подкожной клетчатки",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 104,
+    "fields": {
+      "code": "A18.5+",
+      "disease_description": "Туберкулез глаза",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 105,
+    "fields": {
+      "code": "A18.6+",
+      "disease_description": "Туберкулез уха",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 106,
+    "fields": {
+      "code": "A18.7+",
+      "disease_description": "Туберкулез надпочечников (E35.1*)",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 107,
+    "fields": {
+      "code": "A18.8+",
+      "disease_description": "Туберкулез других уточненных органов",
+      "parent_code": "A18"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 108,
+    "fields": {
+      "code": "A19",
+      "disease_description": "Милиарный туберкулез",
+      "parent_code": "A15-A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 109,
+    "fields": {
+      "code": "A19.0",
+      "disease_description": "Острый милиарный туберкулез одной уточненной локализации",
+      "parent_code": "A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 110,
+    "fields": {
+      "code": "A19.1",
+      "disease_description": "Острый милиарный туберкулез множественной локализации",
+      "parent_code": "A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 111,
+    "fields": {
+      "code": "A19.2",
+      "disease_description": "Острый милиарный туберкулез неуточненной локализации",
+      "parent_code": "A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 112,
+    "fields": {
+      "code": "A19.8",
+      "disease_description": "Другие формы милиарного туберкулеза",
+      "parent_code": "A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 113,
+    "fields": {
+      "code": "A19.9",
+      "disease_description": "Милиарный туберкулез неуточненной локализации",
+      "parent_code": "A19"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 114,
+    "fields": {
+      "code": "A20-A28",
+      "disease_description": "Некоторые бактериальные зоонозы",
+      "parent_code": "A00-B99"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 115,
+    "fields": {
+      "code": "A20",
+      "disease_description": "Чума",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 116,
+    "fields": {
+      "code": "A20.0",
+      "disease_description": "Бубонная чума",
+      "parent_code": "A20"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 117,
+    "fields": {
+      "code": "A20.1",
+      "disease_description": "Целлюлярнокожная чума",
+      "parent_code": "A20"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 118,
+    "fields": {
+      "code": "A20.2",
+      "disease_description": "Легочная чума",
+      "parent_code": "A20"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 119,
+    "fields": {
+      "code": "A20.3",
+      "disease_description": "Чумной менингит",
+      "parent_code": "A20"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 120,
+    "fields": {
+      "code": "A20.7",
+      "disease_description": "Септическая чума",
+      "parent_code": "A20"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 121,
+    "fields": {
+      "code": "A20.8",
+      "disease_description": "Другие формы чумы",
+      "parent_code": "A20"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 122,
+    "fields": {
+      "code": "A20.9",
+      "disease_description": "Чума неуточненная",
+      "parent_code": "A20"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 123,
+    "fields": {
+      "code": "A21",
+      "disease_description": "Туляремия",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 124,
+    "fields": {
+      "code": "A21.0",
+      "disease_description": "Ульцерогландулярная туляремия",
+      "parent_code": "A21"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 125,
+    "fields": {
+      "code": "A21.1",
+      "disease_description": "Окулогландулярная туляремия",
+      "parent_code": "A21"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 126,
+    "fields": {
+      "code": "A21.2",
+      "disease_description": "Легочная туляремия",
+      "parent_code": "A21"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 127,
+    "fields": {
+      "code": "A21.3",
+      "disease_description": "Желудочно-кишечная туляремия",
+      "parent_code": "A21"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 128,
+    "fields": {
+      "code": "A21.7",
+      "disease_description": "Генерализованная туляремия",
+      "parent_code": "A21"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 129,
+    "fields": {
+      "code": "A21.8",
+      "disease_description": "Другие формы туляремии",
+      "parent_code": "A21"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 130,
+    "fields": {
+      "code": "A21.9",
+      "disease_description": "Туляремия неуточненная",
+      "parent_code": "A21"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 131,
+    "fields": {
+      "code": "A22",
+      "disease_description": "Сибирская язва",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 132,
+    "fields": {
+      "code": "A22.0",
+      "disease_description": "Кожная форма сибирской язвы",
+      "parent_code": "A22"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 133,
+    "fields": {
+      "code": "A22.1",
+      "disease_description": "Легочная форма сибирской язвы",
+      "parent_code": "A22"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 134,
+    "fields": {
+      "code": "A22.2",
+      "disease_description": "Желудочно-кишечная форма сибирской язвы",
+      "parent_code": "A22"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 135,
+    "fields": {
+      "code": "A22.7",
+      "disease_description": "Сибиреязвенная септицемия",
+      "parent_code": "A22"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 136,
+    "fields": {
+      "code": "A22.8",
+      "disease_description": "Другие формы сибирской язвы",
+      "parent_code": "A22"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 137,
+    "fields": {
+      "code": "A22.9",
+      "disease_description": "Сибирская язва неуточненная",
+      "parent_code": "A22"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 138,
+    "fields": {
+      "code": "A23",
+      "disease_description": "Бруцеллез",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 139,
+    "fields": {
+      "code": "A23.0",
+      "disease_description": "Бруцеллез, вызванный Brucella melitensis",
+      "parent_code": "A23"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 140,
+    "fields": {
+      "code": "A23.1",
+      "disease_description": "Бруцеллез, вызванный Brucella abortus",
+      "parent_code": "A23"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 141,
+    "fields": {
+      "code": "A23.2",
+      "disease_description": "Бруцеллез, вызванный Brucella suis",
+      "parent_code": "A23"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 142,
+    "fields": {
+      "code": "A23.3",
+      "disease_description": "Бруцеллез, вызванный Brucella canis",
+      "parent_code": "A23"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 143,
+    "fields": {
+      "code": "A23.8",
+      "disease_description": "Другие формы бруцеллеза",
+      "parent_code": "A23"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 144,
+    "fields": {
+      "code": "A23.9",
+      "disease_description": "Бруцеллез неуточненный",
+      "parent_code": "A23"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 145,
+    "fields": {
+      "code": "A24",
+      "disease_description": "Сап и мелиоидоз",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 146,
+    "fields": {
+      "code": "A24.0",
+      "disease_description": "Сап",
+      "parent_code": "A24"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 147,
+    "fields": {
+      "code": "A24.1",
+      "disease_description": "Острый или молниеносный мелиоидоз",
+      "parent_code": "A24"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 148,
+    "fields": {
+      "code": "A24.2",
+      "disease_description": "Подострый и хронический мелиоидоз",
+      "parent_code": "A24"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 149,
+    "fields": {
+      "code": "A24.3",
+      "disease_description": "Другой уточненный мелиоидоз",
+      "parent_code": "A24"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 150,
+    "fields": {
+      "code": "A24.4",
+      "disease_description": "Мелиоидоз неуточненный",
+      "parent_code": "A24"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 151,
+    "fields": {
+      "code": "A25",
+      "disease_description": "Лихорадка от укуса крыс",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 152,
+    "fields": {
+      "code": "A25.0",
+      "disease_description": "Спириллез",
+      "parent_code": "A25"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 153,
+    "fields": {
+      "code": "A25.1",
+      "disease_description": "Стрептобациллез",
+      "parent_code": "A25"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 154,
+    "fields": {
+      "code": "A25.9",
+      "disease_description": "Лихорадка от укуса крыс неуточненная",
+      "parent_code": "A25"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 155,
+    "fields": {
+      "code": "A26",
+      "disease_description": "Эризипелоид",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 156,
+    "fields": {
+      "code": "A26.0",
+      "disease_description": "Кожный эризипелоид",
+      "parent_code": "A26"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 157,
+    "fields": {
+      "code": "A26.7",
+      "disease_description": "Септицемия, вызванная Erysipelothrix",
+      "parent_code": "A26"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 158,
+    "fields": {
+      "code": "A26.8",
+      "disease_description": "Другие формы эризипелоида",
+      "parent_code": "A26"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 159,
+    "fields": {
+      "code": "A26.9",
+      "disease_description": "Эризипелоид неуточненный",
+      "parent_code": "A26"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 160,
+    "fields": {
+      "code": "A27",
+      "disease_description": "Лептоспироз",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 161,
+    "fields": {
+      "code": "A27.0",
+      "disease_description": "Лептоспироз желтушно-геморрагический",
+      "parent_code": "A27"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 162,
+    "fields": {
+      "code": "A27.8",
+      "disease_description": "Другие формы лептоспироза",
+      "parent_code": "A27"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 163,
+    "fields": {
+      "code": "A27.9",
+      "disease_description": "Лептоспироз неуточненный",
+      "parent_code": "A27"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 164,
+    "fields": {
+      "code": "A28",
+      "disease_description": "Другие бактериальные зоонозы, не классифицированные в других рубриках",
+      "parent_code": "A20-A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 165,
+    "fields": {
+      "code": "A28.0",
+      "disease_description": "Пастереллез",
+      "parent_code": "A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 166,
+    "fields": {
+      "code": "A28.1",
+      "disease_description": "Лихорадка от кошачьих царапин",
+      "parent_code": "A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 167,
+    "fields": {
+      "code": "A28.2",
+      "disease_description": "Экстраинтестинальный иерсиниоз",
+      "parent_code": "A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 168,
+    "fields": {
+      "code": "A28.8",
+      "disease_description": "Другие уточненные бактериальные зоонозы, не классифи-",
+      "parent_code": "A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 169,
+    "fields": {
+      "code": "A28.9",
+      "disease_description": "Бактериальные зоонозы неуточненные",
+      "parent_code": "A28"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 170,
+    "fields": {
+      "code": "A30-A49",
+      "disease_description": "Другие бактериальные болезни",
+      "parent_code": "A00-B99"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 171,
+    "fields": {
+      "code": "A30",
+      "disease_description": "Лепра [болезнь Гансена]",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 172,
+    "fields": {
+      "code": "A30.0",
+      "disease_description": "Недифференцированная лепра",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 173,
+    "fields": {
+      "code": "A30.1",
+      "disease_description": "Туберкулоидная лепра",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 174,
+    "fields": {
+      "code": "A30.2",
+      "disease_description": "Пограничная туберкулоидная лепра",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 175,
+    "fields": {
+      "code": "A30.3",
+      "disease_description": "Пограничная лепра",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 176,
+    "fields": {
+      "code": "A30.4",
+      "disease_description": "Пограничная лепроматозная лепра",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 177,
+    "fields": {
+      "code": "A30.5",
+      "disease_description": "Лепроматозная лепра",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 178,
+    "fields": {
+      "code": "A30.8",
+      "disease_description": "Другие формы лепры",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 179,
+    "fields": {
+      "code": "A30.9",
+      "disease_description": "Лепра неуточненная",
+      "parent_code": "A30"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 180,
+    "fields": {
+      "code": "A31",
+      "disease_description": "Инфекции, вызванные другими микобактериями",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 181,
+    "fields": {
+      "code": "A31.0",
+      "disease_description": "Легочная инфекция, вызванная Mycobacterium",
+      "parent_code": "A31"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 182,
+    "fields": {
+      "code": "A31.1",
+      "disease_description": "Кожная инфекция, вызванная Mycobacterium",
+      "parent_code": "A31"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 183,
+    "fields": {
+      "code": "A31.8",
+      "disease_description": "Другие инфекции, вызванные Mycobacterium",
+      "parent_code": "A31"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 184,
+    "fields": {
+      "code": "A31.9",
+      "disease_description": "Инфекция, вызванная Mycobacterium, неуточненная",
+      "parent_code": "A31"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 185,
+    "fields": {
+      "code": "A32",
+      "disease_description": "Листериоз",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 186,
+    "fields": {
+      "code": "A32.0",
+      "disease_description": "Кожный листериоз",
+      "parent_code": "A32"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 187,
+    "fields": {
+      "code": "A32.1+",
+      "disease_description": "Листериозный менингит и менингоэнцефалит",
+      "parent_code": "A32"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 188,
+    "fields": {
+      "code": "A32.7",
+      "disease_description": "Листериозная септицемия",
+      "parent_code": "A32"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 189,
+    "fields": {
+      "code": "A32.8",
+      "disease_description": "Другие формы листериоза",
+      "parent_code": "A32"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 190,
+    "fields": {
+      "code": "A32.9",
+      "disease_description": "Листериоз неуточненный",
+      "parent_code": "A32"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 191,
+    "fields": {
+      "code": "A33",
+      "disease_description": "Столбняк новорожденного",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 192,
+    "fields": {
+      "code": "A34",
+      "disease_description": "Акушерский столбняк",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 193,
+    "fields": {
+      "code": "A35",
+      "disease_description": "Другие формы столбняка",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 194,
+    "fields": {
+      "code": "A36",
+      "disease_description": "Дифтерия",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 195,
+    "fields": {
+      "code": "A36.0",
+      "disease_description": "Дифтерия глотки",
+      "parent_code": "A36"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 196,
+    "fields": {
+      "code": "A36.1",
+      "disease_description": "Дифтерия носоглотки",
+      "parent_code": "A36"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 197,
+    "fields": {
+      "code": "A36.2",
+      "disease_description": "Дифтерия гортани",
+      "parent_code": "A36"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 198,
+    "fields": {
+      "code": "A36.3",
+      "disease_description": "Дифтерия кожи",
+      "parent_code": "A36"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 199,
+    "fields": {
+      "code": "A36.8",
+      "disease_description": "Другая дифтерия",
+      "parent_code": "A36"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 200,
+    "fields": {
+      "code": "A36.9",
+      "disease_description": "Дифтерия неуточненная",
+      "parent_code": "A36"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 201,
+    "fields": {
+      "code": "A37",
+      "disease_description": "Коклюш",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 202,
+    "fields": {
+      "code": "A37.0",
+      "disease_description": "Коклюш, вызванный Bordetella pertussis",
+      "parent_code": "A37"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 203,
+    "fields": {
+      "code": "A37.1",
+      "disease_description": "Коклюш, вызванный Bordetella parapertussis",
+      "parent_code": "A37"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 204,
+    "fields": {
+      "code": "A37.8",
+      "disease_description": "Коклюш, вызванный другим уточненным возбудителем вида Bordetella",
+      "parent_code": "A37"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 205,
+    "fields": {
+      "code": "A37.9",
+      "disease_description": "Коклюш неуточненный",
+      "parent_code": "A37"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 206,
+    "fields": {
+      "code": "A38",
+      "disease_description": "Скарлатина",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 207,
+    "fields": {
+      "code": "A39",
+      "disease_description": "Менингококковая инфекция",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 208,
+    "fields": {
+      "code": "A39.0",
+      "disease_description": "Менингококковый менингит (G01*)",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 209,
+    "fields": {
+      "code": "A39.1+",
+      "disease_description": "Синдром Уотерхауса-Фридериксена (E35.1*)",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 210,
+    "fields": {
+      "code": "A39.2",
+      "disease_description": "Острая менингококкемия",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 211,
+    "fields": {
+      "code": "A39.3",
+      "disease_description": "Хроническая менингококкемия",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 212,
+    "fields": {
+      "code": "A39.4",
+      "disease_description": "Менингококкемия неуточненная",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 213,
+    "fields": {
+      "code": "A39.5+",
+      "disease_description": "Менингококковая болезнь сердца",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 214,
+    "fields": {
+      "code": "A39.8",
+      "disease_description": "Другие менингококковые инфекции",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 215,
+    "fields": {
+      "code": "A39.9",
+      "disease_description": "Менингококковая инфекция неуточненная",
+      "parent_code": "A39"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 216,
+    "fields": {
+      "code": "A40",
+      "disease_description": "Стрептококковая септицемия",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 217,
+    "fields": {
+      "code": "A40.0",
+      "disease_description": "Септицемия, вызванная стрептококком группы A",
+      "parent_code": "A40"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 218,
+    "fields": {
+      "code": "A40.1",
+      "disease_description": "Септицемия, вызванная стрептококком группы B",
+      "parent_code": "A40"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 219,
+    "fields": {
+      "code": "A40.2",
+      "disease_description": "Септицемия, вызванная стрептококком группы D",
+      "parent_code": "A40"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 220,
+    "fields": {
+      "code": "A40.3",
+      "disease_description": "Септицемия, вызванная Streptococcus pneumoniae",
+      "parent_code": "A40"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 221,
+    "fields": {
+      "code": "A40.8",
+      "disease_description": "Другие стрептококковые септицемии",
+      "parent_code": "A40"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 222,
+    "fields": {
+      "code": "A40.9",
+      "disease_description": "Стрептококковая септицемия неуточненная",
+      "parent_code": "A40"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 223,
+    "fields": {
+      "code": "A41",
+      "disease_description": "Другая септицемия",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 224,
+    "fields": {
+      "code": "A41.0",
+      "disease_description": "Септицемия, вызванная Staphylococcus aureus",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 225,
+    "fields": {
+      "code": "A41.1",
+      "disease_description": "Септицемия, вызванная другим уточненным стафилококком",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 226,
+    "fields": {
+      "code": "A41.2",
+      "disease_description": "Септицемия, вызванная неуточненным стафилококком",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 227,
+    "fields": {
+      "code": "A41.3",
+      "disease_description": "Септицемия, вызванная Haemophilus influenzae",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 228,
+    "fields": {
+      "code": "A41.4",
+      "disease_description": "Септицемия, вызванная анаэробами",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 229,
+    "fields": {
+      "code": "A41.5",
+      "disease_description": "Септицемия, вызванная другими грамотрицательными микроорганизмами",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 230,
+    "fields": {
+      "code": "A41.8",
+      "disease_description": "Другая уточненная септицемия",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 231,
+    "fields": {
+      "code": "A41.9",
+      "disease_description": "Септицемия неуточненная",
+      "parent_code": "A41"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 232,
+    "fields": {
+      "code": "A42",
+      "disease_description": "Актиномикоз",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 233,
+    "fields": {
+      "code": "A42.0",
+      "disease_description": "Легочный актиномикоз",
+      "parent_code": "A42"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 234,
+    "fields": {
+      "code": "A42.1",
+      "disease_description": "Абдоминальный актиномикоз",
+      "parent_code": "A42"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 235,
+    "fields": {
+      "code": "A42.2",
+      "disease_description": "Шейно-лицевой актиномикоз",
+      "parent_code": "A42"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 236,
+    "fields": {
+      "code": "A42.7",
+      "disease_description": "Актиномикозная септицемия",
+      "parent_code": "A42"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 237,
+    "fields": {
+      "code": "A42.8",
+      "disease_description": "Другие актиномикозы",
+      "parent_code": "A42"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 238,
+    "fields": {
+      "code": "A42.9",
+      "disease_description": "Актиномикоз неуточненный",
+      "parent_code": "A42"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 239,
+    "fields": {
+      "code": "A43",
+      "disease_description": "Нокардиоз",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 240,
+    "fields": {
+      "code": "A43.0",
+      "disease_description": "Легочный нокардиоз",
+      "parent_code": "A43"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 241,
+    "fields": {
+      "code": "A43.1",
+      "disease_description": "Нокардиоз кожи",
+      "parent_code": "A43"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 242,
+    "fields": {
+      "code": "A43.8",
+      "disease_description": "Другие формы нокардиоза",
+      "parent_code": "A43"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 243,
+    "fields": {
+      "code": "A43.9",
+      "disease_description": "Нокардиоз неуточненный",
+      "parent_code": "A43"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 244,
+    "fields": {
+      "code": "A44",
+      "disease_description": "Бартонеллез",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 245,
+    "fields": {
+      "code": "A44.0",
+      "disease_description": "Системный бартонеллез",
+      "parent_code": "A44"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 246,
+    "fields": {
+      "code": "A44.1",
+      "disease_description": "Кожный и кожно-слизистый бартонеллез",
+      "parent_code": "A44"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 247,
+    "fields": {
+      "code": "A44.8",
+      "disease_description": "Другие бартонеллезы",
+      "parent_code": "A44"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 248,
+    "fields": {
+      "code": "A44.9",
+      "disease_description": "Бартонеллез неуточненный",
+      "parent_code": "A44"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 249,
+    "fields": {
+      "code": "A46",
+      "disease_description": "Рожа",
+      "parent_code": "A30-A49"
+    }
+  },
+  {
+    "model": "morfis_core.icdcode",
+    "pk": 250,
+    "fields": {
+      "code": "A48",
+      "disease_description": "Другие бактериальные болезни, не классифицированные в других рубриках",
+      "parent_code": "A30-A49"
+    }
+  }
+]

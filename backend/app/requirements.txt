@@ -10,3 +10,5 @@ sqlparse==0.4.2
 setuptools==44.0.0
 django-environ==0.8.1
 django-guardian==2.4.0
+drf-haystack==1.8.10
+Whoosh==2.7.4
