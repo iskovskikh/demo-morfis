@@ -45,7 +45,7 @@ class Case(CommonInfo):
     )
 
     timestamp = models.DateTimeField(verbose_name='Дата направления')
-    organization = models.CharField(max_length=255, verbose_name='Организация, создавшая направление')
+    organization = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Организация', null=True)
     disease_description = models.TextField(verbose_name='Диагноз заболевания (состояния)')
     mkb_code = models.ForeignKey(IcdCode, on_delete=models.CASCADE, verbose_name='Код МКБ')
     order_task = models.TextField(verbose_name='Задача исследования')
