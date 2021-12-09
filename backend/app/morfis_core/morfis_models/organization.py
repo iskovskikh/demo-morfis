@@ -19,7 +19,7 @@ class Organization(models.Model):
         default=None
     )
 
-    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Филиал', null=True)
+    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Лаборатория', null=True)
 
     def __str__(self):
         return '%s' % self.title
