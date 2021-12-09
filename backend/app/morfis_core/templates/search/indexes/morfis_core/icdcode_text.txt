@@ -1,0 +1,1 @@
+{{ object.code}}({{object.parent_code}}) {{ object.disease_description }}

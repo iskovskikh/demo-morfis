@@ -56,7 +56,7 @@ class Pacient(models.Model):
         verbose_name='Email'
     )
 
-    subdivision = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Учреждение', null=True)
+    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Учреждение', null=True)
 
     is_active = models.BooleanField(
         default=True,

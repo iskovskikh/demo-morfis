@@ -1,7 +1,7 @@
 from rest_framework import permissions
 
 
-class IsSubdivisionMember(permissions.BasePermission):
+class IsHospitalMember(permissions.BasePermission):
 
     def has_permission(self, request, view):
         return True
@@ -19,8 +19,6 @@ class IsSubdivisionMember(permissions.BasePermission):
         # Instance must have an attribute named `owner`.
         # return obj.owner == request.user
         # return True
-
-        if (request.user.subdivision == obj.subdivision) or request.user.is_admin() :
-            return True
-
+        if request.user.is_authenticated():
+            return request.user.hospital == obj.hospital
         return False

@@ -22,7 +22,7 @@ class MorfisUserAdmin(UserAdmin):
                 'last_name',
                 'first_name',
                 'middle_name',
-                'subdivision'
+                'hospital'
             )}),
         ('Permissions', {
             'fields': (
@@ -44,7 +44,7 @@ class MorfisUserAdmin(UserAdmin):
                 'password2',
                 'is_staff',
                 'is_active',
-                'subdivision'
+                'hospital'
             )}
          ),
     )

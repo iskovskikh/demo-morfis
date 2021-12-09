@@ -19,6 +19,8 @@ class CommonInfo(models.Model):
     def get_current_user():
         return CurrentUserMiddleware.get_current_user()
 
+
+
     def set_user_fields(self, user):
         """
         Set user-related fields before saving the instance.
