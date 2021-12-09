@@ -2,6 +2,7 @@ from django.db import models
 
 from .hospital import Hospital
 from .utils import CommonInfo
+from .organization import Organization
 from datetime import datetime
 
 
