@@ -15,7 +15,7 @@ from morfis_auth.permissions import IsHospitalMember
 
 class MyDefaultPageNumberPagination(rest_framework.pagination.PageNumberPagination):
     page_size_query_param = 'page_size'
-    max_page_size = 100
+    max_page_size = 10
 
 
 
@@ -56,15 +56,11 @@ class IcdCodeSearchSerializer(HighlighterMixin,HaystackSerializer):
         }
 
 class IcdCodesSearchView(HaystackViewSet):
-    # `index_models` is an optional list of which models you would like to include
-    # in the search result. You might have several models indexed, and this provides
-    # a way to filter out those of no interest for this particular view.
-    # (Translates to `SearchQuerySet().models(*index_models)` behind the scenes.
+
     index_models = [IcdCode]
     serializer_class = IcdCodeSearchSerializer
-    # filter_backends = [HaystackHighlightFilter]
-    # filter_backends = [HaystackAutocompleteFilter]
-    # filter_backends = [HaystackAutocompleteFilter,HaystackHighlightFilter]
+    pagination_class = MyDefaultPageNumberPagination
+
 
 class IcdCodeListViewSet(generics.ListAPIView):
     queryset = IcdCode.objects.all()
