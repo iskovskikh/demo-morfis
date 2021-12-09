@@ -2,6 +2,7 @@ from django.db import models
 
 from .hospital import Hospital
 from .utils import CommonInfo
+from .organization import Organization
 from datetime import datetime
 
 
@@ -25,7 +26,7 @@ class Case(CommonInfo):
 
     class CaseStatus(models.TextChoices):
         OPEN = 'OPEN', 'Создана'
-        SENDED = 'SENDSD', 'Направлена'
+        SENDED = 'SENDED', 'Направлена'
         ACCEPTED = 'ACCEPTED', 'Принята'
         # ...
         ARCHIVED = 'ARCHIVED', 'Архивирована'
@@ -45,7 +46,7 @@ class Case(CommonInfo):
     )
 
     timestamp = models.DateTimeField(verbose_name='Дата направления')
-    organization = models.CharField(max_length=255, verbose_name='Организация, создавшая направление')
+    organization = models.ForeignKey(Organization, on_delete=models.CASCADE, verbose_name='Организация', null=True)
     disease_description = models.TextField(verbose_name='Диагноз заболевания (состояния)')
     mkb_code = models.ForeignKey(IcdCode, on_delete=models.CASCADE, verbose_name='Код МКБ')
     order_task = models.TextField(verbose_name='Задача исследования')
