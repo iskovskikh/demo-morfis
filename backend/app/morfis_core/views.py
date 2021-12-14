@@ -48,6 +48,7 @@ class IcdCodesSearchView(HaystackViewSet):
     index_models = [IcdCode]
     serializer_class = IcdCodeSearchSerializer
     pagination_class = MyDefaultPageNumberPagination
+    permission_classes = [permissions.AllowAny]
 
 
 class IcdCodeListViewSet(generics.ListAPIView):
