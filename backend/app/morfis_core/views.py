@@ -1,11 +1,6 @@
 import rest_framework.pagination
-from django.db.models import Q
-from django.shortcuts import render
 
-# Create your views here.
-from rest_framework import viewsets, permissions, generics, filters, mixins
-from rest_framework.generics import GenericAPIView, get_object_or_404
-from rest_framework.permissions import DjangoObjectPermissions
+from rest_framework import permissions, generics, filters
 
 from morfis_core.morfis_models.case import Case, IcdCode
 from .serializers import ICDcodeSerializer
@@ -21,7 +16,6 @@ class MyDefaultPageNumberPagination(rest_framework.pagination.PageNumberPaginati
 
 from drf_haystack.serializers import HaystackSerializer, HighlighterMixin
 from drf_haystack.viewsets import HaystackViewSet
-from drf_haystack.filters import HaystackHighlightFilter, HaystackAutocompleteFilter
 
 from .search_indexes import IcdCodesIndex
 
@@ -34,13 +28,7 @@ class IcdCodeSearchSerializer(HighlighterMixin,HaystackSerializer):
 
 
     class Meta:
-        # The `index_classes` attribute is a list of which search indexes
-        # we want to include in the search.
         index_classes = [IcdCodesIndex]
-
-        # The `fields` contains all the fields we want to include.
-        # NOTE: Make sure you don't confuse these with model attributes. These
-        # fields belong to the search index!
         fields = [
             "text",
             "id",
@@ -78,7 +66,6 @@ class CaseUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView):
 
     def get_queryset(self):
         return Case.objects.all()
-        # return Case.objects.filter(hospital=self.request.user.hospital)
 
 
 class CaseListViewSet(generics.ListAPIView):

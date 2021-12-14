@@ -4,12 +4,73 @@
     "pk": 1,
     "fields": {
       "password": "pbkdf2_sha256$260000$0cq1MQMQ0Jwmi1HQHcxanQ$KXK2Ab5PtBQy0UK6tXFeOFFV0qHllVqg2zqBsCIHyKc=",
-      "last_login": "2021-11-09T16:03:37.097Z",
+      "last_login": "2021-12-10T10:40:14.801Z",
       "is_superuser": true,
       "username": "admin",
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
       "is_staff": true,
       "is_active": true,
       "date_joined": "2021-11-09T16:03:00.224Z",
+      "hospital": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "morfis_auth.morfisuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$gAcFOtkrHT0yOXGnj4SiFJ$wi/7Fn5abk3Otnyu6s8HVuP5yPNweVP0Nx/hbVoEUJo=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "user1",
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-12-14T12:02:57.446Z",
+      "hospital": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "morfis_auth.morfisuser",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$Cc4zRVxdwQeuCS7crrUrzU$NmKRq5HoagVrIXkjT2Al3wDMKbfZUJ6Ff2jeJ6wpEwc=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "user2",
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-12-14T12:03:54.235Z",
+      "hospital": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "morfis_auth.morfisuser",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$9lxLJlM2UjU0C9VaqtwfXQ$iu0Gt0LvKYh4mVyRjgsjXhG9ZMO+8Z8ui83KYvlJYMc=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "user3",
+      "first_name": "",
+      "middle_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-12-14T12:11:26.236Z",
+      "hospital": null,
       "groups": [],
       "user_permissions": []
     }
