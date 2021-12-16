@@ -1,5 +1,49 @@
 # Morfis demo
 
+Upd.16/12/21
+
+Изменена база данных с sqlight на postgres
+Смотри файл .env.example и поправь .env соответствующе.
+
+###Установка postgres
+
+`sudo apt-get update`
+
+`sudo apt-get install postgresql`
+
+зависимости для psycopg2:
+
+`sudo apt-get install python3-dev libpq-dev`
+
+`pip install psycopg2`
+
+Запускаем движок
+
+`sudo service postgresql start`
+
+Перед использованием нужно добавить базу данных и пользователя:
+
+`sudo -u postgres psql`
+
+`create database имя_базы;`
+
+`create user имя_пользователя with password 'пароль';`
+
+`grant all privileges on database имя_базы to имя_пользователя;`
+
+`\q` - выйти из psql консоли
+
+###Запуск django.
+
+База данных будет пуста.
+Нужно будет применить миграции, загрузить тестовые данные из фикстур.
+
+`./manage.py migrate`
+
+`./manage.py loaddata ./fixtures/users.json ./fixtures/icd_code`
+
+---
+
 Upd.15/11/21
 
 Добавлены endpoint'ы:
