@@ -3,22 +3,35 @@ version: "3.8"
 services:
 #  frontend:
 #    image: morfis/frontend
-#    build: ./front/
+#    build: ./frontend/
 #    container_name: frontend_app
 #    ports:
 #      - "3000:3000"
 #    expose:
 #      - "3000"
 
+  database:
+    image: postgres:14-alpine
+    container_name: database_app
+    env_file:
+      - ./env/.env.dev-docker
+    volumes:
+      - pg_database:/var/lib/postgresql/data
+
   backend:
     image: morfis/backend
     container_name: backend_app
     build: ./backend/
-#    env_file:
-#      - ./backend/.env
+    env_file:
+      - ./env/.env.dev-docker
     expose:
       - "8000"
-    command: sh -c "./manage.py collectstatic --no-input && gunicorn --bind :8000 --workers 3 app.wsgi"
+    command: sh -c "
+      ./manage.py collectstatic --no-input
+      && ./manage.py migrate
+      && gunicorn --bind :8000 --workers 3 app.wsgi
+      "
+#     && ./manage.py loaddata ./fixtures/users.json ./fixtures/icd_code.json
     volumes:
       - ./static/:/app/static
 
@@ -37,3 +50,6 @@ services:
     depends_on:
 #      - frontend
       - backend
+      - database
+volumes:
+  pg_database:

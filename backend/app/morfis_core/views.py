@@ -61,6 +61,8 @@ class IcdCodeListViewSet(generics.ListAPIView):
     permission_classes = [permissions.AllowAny]
 
 
+
+
 class CaseUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView):
     serializer_class = CaseSerializer
     permission_classes = [permissions.IsAuthenticated & IsHospitalMember]

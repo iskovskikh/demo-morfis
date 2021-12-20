@@ -7,8 +7,14 @@ ADD ./app/ ${APP_ROOT}
 
 RUN apk add --no-cache --virtual .build-deps \
     ca-certificates \
-#    gcc postgresql-dev linux-headers musl-dev \
+#    gcc postgresql-dev \
+#    linux-headers musl-dev \
 #    libffi-dev jpeg-dev zlib-dev \
+    gcc \
+    python3-dev \
+    musl-dev \
+    postgresql-dev \
+
     && pip install -r requirements.txt \
     && find /usr/local \
         \( -type d -a -name test -o -name tests \) \
