@@ -36,6 +36,7 @@ services:
       && ./manage.py migrate
       && gunicorn --bind :8000 --workers 3 app.wsgi
       "
+#     Загрузка тестовых данных
 #     && ./manage.py loaddata ./fixtures/users.json ./fixtures/icd_code.json
     volumes:
       - ./static/:/app/static
@@ -53,7 +54,7 @@ services:
       - NGINX_HOST=localhost
       - NGINX_PORT=80
     depends_on:
-#      - frontend
+      - frontend
       - backend
       - database
 volumes:
