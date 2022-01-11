@@ -35,9 +35,7 @@ services:
       ./manage.py collectstatic --no-input
       && ./manage.py migrate
       && gunicorn --bind :8000 --workers 3 app.wsgi
-      "
-#     Загрузка тестовых данных
-#     && ./manage.py loaddata ./fixtures/users.json ./fixtures/icd_code.json
+      && ./manage.py loaddata ./fixtures/users.json ./fixtures/icd_code.json"
     volumes:
       - ./static/:/app/static
 
