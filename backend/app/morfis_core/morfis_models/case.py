@@ -11,6 +11,13 @@ class IcdCode(models.Model):
     disease_description = models.CharField(max_length=255, verbose_name='Описание диагнозa')
     parent_code = models.CharField(max_length=255, verbose_name='Код родителя')
 
+    # @property
+    # def highlight(self, search):
+    #     text = '%s (%s) %s' % (self.code, self.parent_code, self.disease_description)
+    #     highlighted = text.replace(search, '<span class="highlight">{}</span>'.format(search))
+    #     return highlighted
+
+
     def __str__(self):
         return '%s - %s' % (self.code, self.disease_description)
 

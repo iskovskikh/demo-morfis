@@ -1,4 +1,5 @@
 import rest_framework.pagination
+from django.db.models import Q
 
 from rest_framework import permissions, generics, filters
 
@@ -13,19 +14,16 @@ class MyDefaultPageNumberPagination(rest_framework.pagination.PageNumberPaginati
     max_page_size = 10
 
 
-
 from drf_haystack.serializers import HaystackSerializer, HighlighterMixin
 from drf_haystack.viewsets import HaystackViewSet
 
 from .search_indexes import IcdCodesIndex
 
 
-class IcdCodeSearchSerializer(HighlighterMixin,HaystackSerializer):
-
+class IcdCodeSearchSerializer(HighlighterMixin, HaystackSerializer):
     highlighter_css_class = "highlighted"
     highlighter_html_tag = "span"
-    highlighter_max_length = 200
-
+    highlighter_max_length = 300
 
     class Meta:
         index_classes = [IcdCodesIndex]
@@ -43,11 +41,12 @@ class IcdCodeSearchSerializer(HighlighterMixin,HaystackSerializer):
             "q": "autocomplete"
         }
 
-class IcdCodesSearchView(HaystackViewSet):
 
+class IcdCodesSearchView(HaystackViewSet):
     index_models = [IcdCode]
     serializer_class = IcdCodeSearchSerializer
     pagination_class = MyDefaultPageNumberPagination
+    # pagination_class = None
     permission_classes = [permissions.AllowAny]
 
 
@@ -58,9 +57,23 @@ class IcdCodeListViewSet(generics.ListAPIView):
     search_fields = ['code', 'disease_description']
     filter_backends = (filters.SearchFilter,)
     pagination_class = MyDefaultPageNumberPagination
+    # pagination_class = None
     permission_classes = [permissions.AllowAny]
 
 
+class IcdCodesSearchViewSet(generics.ListAPIView):
+    serializer_class = ICDcodeSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        search = self.request.query_params.get('search')
+        if search:
+            query = Q(code__icontains=search) \
+                    | Q(disease_description__icontains=search) \
+                    | Q(parent_code__icontains=search)
+            return IcdCode.objects.filter(query)[:10]
+        else:
+            return IcdCode.objects.none()
 
 
 class CaseUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView):
