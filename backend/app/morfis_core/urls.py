@@ -22,7 +22,8 @@ urlpatterns = [
 
     path('case/', views.CaseListViewSet.as_view()),
     path('case/<int:pk>/', views.CaseUpdateViewSet.as_view()),
-    path('icd_codes/', views.IcdCodeListViewSet.as_view()),
+    # path('icd_codes/', views.IcdCodeListViewSet.as_view()),
+    path('icd_codes/', views.IcdCodesSearchViewSet.as_view()),
     # path('icd_codes/search', views.IcdCodesSearchView.as_view()),
     path('', include(router.urls)),
 

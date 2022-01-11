@@ -215,7 +215,8 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(minutes=10),
 }
 
-HAYSTACK_DEFAULT_OPERATOR = 'AND'
+HAYSTACK_LIMIT_TO_REGISTERED_MODELS = False
+HAYSTACK_DEFAULT_OPERATOR = 'OR'
 HAYSTACK_CONNECTIONS = {
     # 'default': {
     #     'ENGINE': 'haystack.backends.solr_backend.SolrEngine',

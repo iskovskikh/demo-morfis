@@ -1,14 +1,19 @@
 version: "3.8"
 
 services:
-#  frontend:
-#    image: morfis/frontend
-#    build: ./frontend/
-#    container_name: frontend_app
+  frontend:
+    image: morfis/frontend
+    build: ./frontend/
+    container_name: frontend_app
+    environment:
+      - BROWSER_BASE_URL=http://localhost/api/v1/
+      - BASE_URL=backend_app
+      - NUXT_HOST=0.0.0.0
+      - NUXT_PORT=3000
 #    ports:
 #      - "3000:3000"
-#    expose:
-#      - "3000"
+    expose:
+      - "3000"
 
   database:
     image: postgres:14-alpine
