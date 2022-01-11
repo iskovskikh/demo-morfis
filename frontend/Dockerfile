@@ -8,6 +8,7 @@ ADD app ${APP_ROOT}
 
 RUN ls
 
+RUN yarn install
 RUN yarn build
 
 CMD ["yarn", "start"]

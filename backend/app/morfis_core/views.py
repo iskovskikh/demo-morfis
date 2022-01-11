@@ -76,6 +76,13 @@ class IcdCodesSearchViewSet(generics.ListAPIView):
             return IcdCode.objects.none()
 
 
+class CaseCreateViewSet(generics.CreateAPIView):
+    serializer_class = CaseSerializer
+    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+
+    def perform_create(self, serializer):
+        serializer.save()
+
 class CaseUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView):
     serializer_class = CaseSerializer
     permission_classes = [permissions.IsAuthenticated & IsHospitalMember]

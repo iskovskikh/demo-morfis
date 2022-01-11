@@ -2,7 +2,6 @@ from django.db import models
 
 from .hospital import Hospital
 from .utils import CommonInfo
-from .organization import Organization
 from datetime import datetime
 
 
@@ -53,12 +52,12 @@ class Case(CommonInfo):
     )
 
     timestamp = models.DateTimeField(verbose_name='Дата направления')
-    organization = models.ForeignKey(Organization, on_delete=models.CASCADE, verbose_name='Организация', null=True)
+    # organization = models.ForeignKey(Organization, on_delete=models.CASCADE, verbose_name='Организация', null=True)
     disease_description = models.TextField(verbose_name='Диагноз заболевания (состояния)')
     mkb_code = models.ForeignKey(IcdCode, on_delete=models.CASCADE, verbose_name='Код МКБ')
     order_task = models.TextField(verbose_name='Задача исследования')
 
-    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Филиал', null=True)
+    hospital = models.ForeignKey(Hospital, on_delete=models.CASCADE, verbose_name='Учреждение', null=True)
 
 
 
