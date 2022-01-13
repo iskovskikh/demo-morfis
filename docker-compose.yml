@@ -35,8 +35,9 @@ services:
     command: sh -c "
       ./manage.py collectstatic --no-input
       && ./manage.py migrate
-      && gunicorn --bind :8000 --workers 3 app.wsgi
-      && ./manage.py loaddata ./fixtures/users.json ./fixtures/icd_code.json"
+      && ./manage.py loaddata ./fixtures/users.json ./fixtures/icd_code.json
+      && gunicorn --bind :8000 --workers 3 app.wsgi"
+
     volumes:
       - ./static/:/app/static
 
