@@ -21,6 +21,7 @@ services:
     env_file:
       - ./env/.env.dev-docker
     volumes:
+      - ./database/init-database.sh:/docker-entrypoint-initdb.d/init-database.sh
       - pg_database:/var/lib/postgresql/data
 
   backend:
