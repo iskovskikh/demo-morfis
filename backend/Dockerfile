@@ -29,3 +29,5 @@ RUN apk add --no-cache --virtual .build-deps \
     )" \
     && apk add --virtual .rundeps $runDeps \
     && apk del .build-deps
+
+RUN chmod +x /app/manage.py
