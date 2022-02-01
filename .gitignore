@@ -1,5 +1,1 @@
-.idea
-.venv
-static
-logs
-/env/.env.dev
+.env.dev
