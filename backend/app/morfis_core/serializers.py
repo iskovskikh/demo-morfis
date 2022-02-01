@@ -3,6 +3,7 @@ from rest_framework.utils.representation import serializer_repr
 
 from morfis_core.morfis_models import case
 from morfis_core.morfis_models import organizations
+from morfis_core.morfis_models import address
 
 
 class ICDcodeSerializer(serializers.ModelSerializer):
@@ -40,4 +41,10 @@ class CaseSerializer(serializers.ModelSerializer):
 class OrganizationSerializer(serializers.ModelSerializer):
     class Meta:
         model = organizations.Organization
+        fields = '__all__'
+
+
+class AddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = address.Address
         fields = '__all__'

@@ -7,8 +7,10 @@ from morfis_core.morfis_models.case import Case, IcdCode
 from .serializers import ICDcodeSerializer
 from .serializers import CaseSerializer
 from .serializers import OrganizationSerializer
+from .serializers import AddressSerializer
 from morfis_auth.permissions import IsHospitalMember
 from morfis_core.morfis_models.organizations import Organization
+from morfis_core.morfis_models.address import Address
 
 class MyDefaultPageNumberPagination(rest_framework.pagination.PageNumberPagination):
     page_size_query_param = 'page_size'
@@ -107,6 +109,7 @@ class CaseListViewSet(generics.ListAPIView):
 class OrganizationSearchViewSet(generics.ListAPIView):
     serializer_class = OrganizationSerializer
     permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+    pagination_class = MyDefaultPageNumberPagination
 
     def get_queryset(self):
         search = self.request.query_params.get('q')
@@ -119,7 +122,7 @@ class OrganizationSearchViewSet(generics.ListAPIView):
 
 class OrganizationUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView):
     serializer_class = OrganizationSerializer
-    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+    permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         return Organization.objects.all()
@@ -127,12 +130,49 @@ class OrganizationUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView
 
 class OrganizationCreateViewSet(generics.CreateAPIView):
     serializer_class = OrganizationSerializer
-    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+    permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
         serializer.save()
 
 class OrganizationListViewSet(generics.ListAPIView):
     serializer_class = OrganizationSerializer
-    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+    permission_classes = [permissions.IsAuthenticated]
+    pagination_class = MyDefaultPageNumberPagination
     queryset = Organization.objects.all()
+
+
+class AddressListViewSet(generics.ListAPIView):
+    serializer_class = AddressSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    pagination_class = MyDefaultPageNumberPagination
+    queryset = Address.objects.all()
+
+
+class AddressCreateViewSet(generics.CreateAPIView):
+    serializer_class = AddressSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save()
+
+class AddressUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView):
+    serializer_class = AddressSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return Address.objects.all()
+
+
+class AddressSearchViewSet(generics.ListAPIView):
+    serializer_class = AddressSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    pagination_class = MyDefaultPageNumberPagination
+
+    def get_queryset(self):
+        search = self.request.query_params.get('q')
+        if search:
+            query = Q(address__icontains=search)
+            return Address.objects.filter(query)[:20]
+        else:
+            return Address.objects.none()

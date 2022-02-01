@@ -31,5 +31,9 @@ urlpatterns = [
     path('organization/add/', views.OrganizationCreateViewSet.as_view()),
     path('organization/edit/<int:pk>/', views.OrganizationUpdateViewSet.as_view()),
     path('organization/search/', views.OrganizationSearchViewSet.as_view()),
+    path('address/', views.AddressListViewSet.as_view()),
+    path('address/add/', views.AddressCreateViewSet.as_view()),
+    path('address/edit/<int:pk>/', views.AddressUpdateViewSet.as_view()),
+    path('address/search/', views.AddressSearchViewSet.as_view()),
 
 ]

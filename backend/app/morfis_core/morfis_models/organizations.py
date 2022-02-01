@@ -1,7 +1,6 @@
 from django.db import models
 
 from morfis_core.morfis_models.address import Address
-from .hospital import Hospital
 
 
 class Organization(models.Model):
@@ -11,7 +10,7 @@ class Organization(models.Model):
     )
 
 
-    address = models.OneToOneField(
+    address = models.ForeignKey(
         Address,
         on_delete=models.CASCADE,
         verbose_name='Адрес организации',
@@ -19,12 +18,7 @@ class Organization(models.Model):
         null=True,
         default=None
     )
-    hospital = models.OneToOneField(
-        Hospital,
-        on_delete=models.CASCADE,
-        verbose_name='Учреждение',
-        null=True
-    )
+
 
     def __str__(self):
         return '%s' % self.title
