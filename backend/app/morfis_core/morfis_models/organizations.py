@@ -1,0 +1,34 @@
+from django.db import models
+
+from morfis_core.morfis_models.address import Address
+from .hospital import Hospital
+
+
+class Organization(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name='Название организации'
+    )
+
+
+    address = models.OneToOneField(
+        Address,
+        on_delete=models.CASCADE,
+        verbose_name='Адрес организации',
+        blank=True,
+        null=True,
+        default=None
+    )
+    hospital = models.OneToOneField(
+        Hospital,
+        on_delete=models.CASCADE,
+        verbose_name='Учреждение',
+        null=True
+    )
+
+    def __str__(self):
+        return '%s' % self.title
+
+    class Meta:
+        verbose_name = 'Организация'
+        verbose_name_plural = 'Организации'

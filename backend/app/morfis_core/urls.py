@@ -27,5 +27,9 @@ urlpatterns = [
     path('icd_codes/', views.IcdCodesSearchViewSet.as_view()),
     # path('icd_codes/search', views.IcdCodesSearchView.as_view()),
     path('', include(router.urls)),
+    path('organization/', views.OrganizationListViewSet.as_view()),
+    path('organization/add/', views.OrganizationCreateViewSet.as_view()),
+    path('organization/edit/<int:pk>/', views.OrganizationUpdateViewSet.as_view()),
+    path('organization/search/', views.OrganizationSearchViewSet.as_view()),
 
 ]

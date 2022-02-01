@@ -6,8 +6,9 @@ from rest_framework import permissions, generics, filters
 from morfis_core.morfis_models.case import Case, IcdCode
 from .serializers import ICDcodeSerializer
 from .serializers import CaseSerializer
+from .serializers import OrganizationSerializer
 from morfis_auth.permissions import IsHospitalMember
-
+from morfis_core.morfis_models.organizations import Organization
 
 class MyDefaultPageNumberPagination(rest_framework.pagination.PageNumberPagination):
     page_size_query_param = 'page_size'
@@ -102,3 +103,36 @@ class CaseListViewSet(generics.ListAPIView):
 
     def filter_queryset_for_user(self, qs, user):
         return qs.order_by('add_date')
+
+class OrganizationSearchViewSet(generics.ListAPIView):
+    serializer_class = OrganizationSerializer
+    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+
+    def get_queryset(self):
+        search = self.request.query_params.get('q')
+        if search:
+            query = Q(title__icontains=search)
+            return Organization.objects.filter(query)[:20]
+        else:
+            return Organization.objects.none()
+
+
+class OrganizationUpdateViewSet(generics.UpdateAPIView, generics.RetrieveAPIView):
+    serializer_class = OrganizationSerializer
+    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+
+    def get_queryset(self):
+        return Organization.objects.all()
+
+
+class OrganizationCreateViewSet(generics.CreateAPIView):
+    serializer_class = OrganizationSerializer
+    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+
+    def perform_create(self, serializer):
+        serializer.save()
+
+class OrganizationListViewSet(generics.ListAPIView):
+    serializer_class = OrganizationSerializer
+    permission_classes = [permissions.IsAuthenticated & IsHospitalMember]
+    queryset = Organization.objects.all()
