@@ -2,3 +2,5 @@
 .venv
 static
 logs
+/env/.env.dev
+
